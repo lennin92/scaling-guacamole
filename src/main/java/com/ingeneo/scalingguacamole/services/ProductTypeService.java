@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 @Service
-public class ProductTypeService {
+public class ProductTypeService implements IProductTypeService {
     private ProductTypeRepository productTypeRepository;
     public ProductTypeService(
             @Autowired ProductTypeRepository productTypeRepository
