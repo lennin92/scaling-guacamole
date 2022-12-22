@@ -16,7 +16,7 @@ import lombok.*;
 public class Client {
     @Id
     private String id;
-    @Column(name = "clients_idnumber")
+    @Column(name = "clients_idnumber", unique = true)
     private String clientsIdentification;
     @Column(name = "clients_name")
     private String clientsName;
