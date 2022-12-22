@@ -26,17 +26,17 @@ public class ClientsService implements IClientsService{
     @Override
     public ClientDetailDto createClient(AddClientDto newClient) {
         Client c = this.repository.save(Client.builder()
-                        .clientsIdentification(newClient.getClientsIdentificationNumber())
-                        .clientsName(newClient.getClientsName())
+                        .clientsIdentification(newClient.getIdentificationNumber())
+                        .clientsName(newClient.getName())
                 .build());
         return this.generateDetailDtoFromClient(c);
     }
 
     private ClientDetailDto generateDetailDtoFromClient(Client client){
         return ClientDetailDto.builder()
-                .clientsName(client.getClientsName())
+                .name(client.getClientsName())
                 .id(client.getId())
-                .clientsIdentificationNumber(client.getClientsIdentification())
+                .identificationNumber(client.getClientsIdentification())
                 .build();
     }
 }

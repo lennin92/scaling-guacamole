@@ -1,10 +1,11 @@
 package com.ingeneo.scalingguacamole.dtos.responses;
 
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
 @Getter
-@Builder
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class ProductTypeDetailDto {
     private String id;
     private String name;

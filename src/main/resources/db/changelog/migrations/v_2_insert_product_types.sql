@@ -1,3 +1,5 @@
+--liquibase formatted sql
+--changeset ldhn:2
 INSERT INTO product_type (id, product_type_name)
     values ('01GMX95VA7MJEC6GM6BBHWG9F0','Bienes de consumo'),
            ('01GMX968WARGNCNTW1STTCB309','Bienes de uso comun'),

@@ -1,13 +1,13 @@
 package com.ingeneo.scalingguacamole.dtos.responses;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
 @Getter
-@Builder
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class ClientDetailDto {
     private String id;
-    private String clientsIdentificationNumber;
-    private String clientsName;
+    private String identificationNumber;
+    private String name;
 }
