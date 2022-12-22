@@ -21,7 +21,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @PropertySource({ "classpath:persistence.properties" })
-@ComponentScan(basePackages = { "com.ingeneo.scalingguacamole.entities" })
+@ComponentScan(basePackages = { "com.ingeneo.scalingguacamole" })
 @EnableJpaRepositories(basePackages = {"com.ingeneo.scalingguacamole.repositories" })
 public class PersistenceConfig {
     private final Environment env;

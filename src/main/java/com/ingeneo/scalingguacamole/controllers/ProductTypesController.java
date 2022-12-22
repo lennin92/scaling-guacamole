@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/product_types")
 public class ProductTypesController {
-    private IProductTypeService service;
+    private final IProductTypeService service;
 
     public ProductTypesController(
             @Autowired IProductTypeService service
@@ -26,3 +26,4 @@ public class ProductTypesController {
         return this.service.getProductTypes();
     }
 }
+
