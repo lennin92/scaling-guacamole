@@ -9,7 +9,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "waybill")
+@Entity(name = "way_bill")
 public class WayBill {
     @Id
     @Setter(AccessLevel.NONE)
