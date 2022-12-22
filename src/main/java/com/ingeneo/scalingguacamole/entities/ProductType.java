@@ -15,6 +15,7 @@ import lombok.*;
 @Entity(name = "product_type")
 public class ProductType {
     @Id
+    @Setter(AccessLevel.NONE)
     private String id;
 
     @Column(name = "product_type_name")

@@ -1,5 +1,6 @@
 package com.ingeneo.scalingguacamole.controllers;
 
+import com.ingeneo.scalingguacamole.dtos.requests.AddClientDto;
 import com.ingeneo.scalingguacamole.dtos.responses.ClientDetailDto;
 import com.ingeneo.scalingguacamole.services.IClientsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,5 +23,7 @@ public class ClientsController {
     }
 
     @PostMapping
-    public ClientDetailDto createClient(@RequestBody CreateCl)
+    public ClientDetailDto createClient(@RequestBody AddClientDto bdy){
+        return this.service.createClient(bdy);
+    }
 }

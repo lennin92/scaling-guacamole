@@ -12,6 +12,7 @@ import lombok.*;
 @Entity(name = "waybill")
 public class WayBill {
     @Id
+    @Setter(AccessLevel.NONE)
     private String id;
 
     @OneToOne(cascade = CascadeType.ALL)

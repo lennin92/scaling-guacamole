@@ -15,6 +15,7 @@ import java.time.ZonedDateTime;
 @Entity(name = "delivery")
 public class Delivery {
     @Id
+    @Setter(AccessLevel.NONE)
     private String id;
 
     @ManyToOne

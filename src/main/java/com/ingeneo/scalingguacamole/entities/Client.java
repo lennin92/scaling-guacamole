@@ -8,13 +8,14 @@ import jakarta.persistence.PrePersist;
 import lombok.*;
 
 @Getter
-@Setter
+@Setter()
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity(name = "client")
 public class Client {
     @Id
+    @Setter(AccessLevel.NONE)
     private String id;
     @Column(name = "clients_idnumber", unique = true)
     private String clientsIdentification;
