@@ -38,6 +38,12 @@ public class Delivery {
     @Column(name = "delivery_price")
     private BigDecimal deliveryPrice;
 
+    @Column(name = "price_with_discount")
+    private BigDecimal priceWithDiscount;
+
+    @Column(name = "product_quantity")
+    private BigDecimal productQuantity;
+
     @PrePersist
     private void prePersist(){
         this.id = UlidCreator.getMonotonicUlid().toString();

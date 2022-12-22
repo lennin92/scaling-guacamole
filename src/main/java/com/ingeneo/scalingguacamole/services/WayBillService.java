@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -50,12 +51,16 @@ public class WayBillService implements IWayBillService{
         if (ptc.isEmpty()){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Prudct type doesn't exists");
         }
+        BigDecimal priceWithDiscount = bdy.getProductQuantity().compareTo(BigDecimal.valueOf(10)) <= 0 ?
+                bdy.getPrice() : bdy.getPrice().multiply(BigDecimal.valueOf(0.95));
         Delivery d = Delivery.builder()
                 .client(oc.get())
                 .productType(ptc.get())
                 .deliveryPrice(bdy.getPrice())
                 .registeredAt(ZonedDateTime.now())
                 .estimatedDeliveryDate(bdy.getEstimatedDeliveryTime())
+                .productQuantity(bdy.getProductQuantity())
+                .priceWithDiscount(priceWithDiscount)
                 .build();
         d = this.deliveryRepository.save(d);
         WayBill bl = WayBill.builder()
@@ -83,6 +88,8 @@ public class WayBillService implements IWayBillService{
                 .clientId(cl.getId())
                 .estimatedDeliveryTime(bl.getDelivery().getEstimatedDeliveryDate())
                 .registeredAt(bl.getDelivery().getRegisteredAt())
+                .priceWithDiscount(bl.getDelivery().getPriceWithDiscount())
+                .quantity(bl.getDelivery().getProductQuantity())
                 .build();
     }
 }

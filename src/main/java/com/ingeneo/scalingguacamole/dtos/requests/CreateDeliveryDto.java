@@ -12,5 +12,6 @@ public class CreateDeliveryDto {
     private String productTypeId;
     private String clientId;
     private BigDecimal price;
+    private BigDecimal productQuantity;
     private ZonedDateTime estimatedDeliveryTime;
 }

@@ -23,4 +23,6 @@ public class WaybillDetailDto {
     private BigDecimal price;
     private ZonedDateTime estimatedDeliveryTime;
     private ZonedDateTime registeredAt;
+    private BigDecimal quantity;
+    private BigDecimal priceWithDiscount;
 }

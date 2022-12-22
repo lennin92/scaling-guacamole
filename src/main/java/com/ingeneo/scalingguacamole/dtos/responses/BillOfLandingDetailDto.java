@@ -21,6 +21,8 @@ public class BillOfLandingDetailDto {
     private String clientIdentificationNumber;
     private String shipmentPort;
     private BigDecimal price;
+    private BigDecimal quantity;
+    private BigDecimal priceWithDiscount;
     private ZonedDateTime estimatedDeliveryTime;
     private ZonedDateTime registeredAt;
 }

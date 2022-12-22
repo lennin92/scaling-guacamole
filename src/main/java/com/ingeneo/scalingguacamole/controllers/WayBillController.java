@@ -26,7 +26,8 @@ public class WayBillController {
     }
 
     @PostMapping
-    public WaybillDetailDto createWaybill(CreateWayBillDto bdy){
+    public WaybillDetailDto createWaybill(
+            @RequestBody CreateWayBillDto bdy){
         return this.service.createWayBill(bdy);
     }
 }
