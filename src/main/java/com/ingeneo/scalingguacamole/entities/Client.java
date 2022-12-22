@@ -12,6 +12,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 @Entity(name = "client")
 public class Client {
     @Id

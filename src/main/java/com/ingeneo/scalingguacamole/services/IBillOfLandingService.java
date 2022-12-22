@@ -7,10 +7,7 @@ import java.util.List;
 
 public interface IBillOfLandingService {
     List<BillOfLandingDetailDto> getAllByCriteria(
-            String clientId,
-            String productTypeId,
-            String fleetNumber,
-            String billOfLandingNumber
+            String clientName
     );
 
     BillOfLandingDetailDto createBillOfLanding(CreateBillOfLandingDto bdy);

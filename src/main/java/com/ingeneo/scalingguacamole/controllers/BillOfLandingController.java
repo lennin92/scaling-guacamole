@@ -22,16 +22,14 @@ public class BillOfLandingController {
 
     @GetMapping
     public List<BillOfLandingDetailDto> getWaybillFilteded(
-            @RequestParam(value = "clientId", defaultValue = "") String clientId,
-            @RequestParam(value = "productTypeId", defaultValue = "") String productTypeId,
-            @RequestParam(value = "trucksPlate", defaultValue = "") String trucksPlate,
-            @RequestParam(value = "waybillNumber", defaultValue = "") String waybillNumber
+            @RequestParam(value = "clientName", defaultValue = "") String clientName
     ){
-        return this.service.getAllByCriteria(clientId, productTypeId, trucksPlate, waybillNumber);
+        return this.service.getAllByCriteria(clientName);
     }
 
     @PostMapping
-    public BillOfLandingDetailDto createWaybill(CreateBillOfLandingDto bdy){
+    public BillOfLandingDetailDto createWaybill(
+            @RequestBody CreateBillOfLandingDto bdy){
         return this.service.createBillOfLanding(bdy);
     }
 }

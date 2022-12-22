@@ -7,10 +7,7 @@ import java.util.List;
 
 public interface IWayBillService {
     List<WaybillDetailDto> getAllByCriteria(
-            String clientId,
-            String productTypeId,
-            String trucksPlate,
-            String waybillNumber
+            String clientName
     );
 
     WaybillDetailDto createWayBill(CreateWayBillDto bdy);

@@ -12,4 +12,5 @@ import lombok.Setter;
 public class CreateWayBillDto extends CreateDeliveryDto {
     private String trucksPlate;
     private String waybillNumber;
+    private String warehouse;
 }

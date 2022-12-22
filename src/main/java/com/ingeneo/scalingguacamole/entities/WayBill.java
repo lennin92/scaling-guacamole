@@ -9,6 +9,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 @Entity(name = "way_bill")
 public class WayBill {
     @Id

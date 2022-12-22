@@ -12,6 +12,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 @Entity(name = "product_type")
 public class ProductType {
     @Id

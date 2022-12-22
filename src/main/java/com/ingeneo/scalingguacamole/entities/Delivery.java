@@ -12,6 +12,7 @@ import java.time.ZonedDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 @Entity(name = "delivery")
 public class Delivery {
     @Id

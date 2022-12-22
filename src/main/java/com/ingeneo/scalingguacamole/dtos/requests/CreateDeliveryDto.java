@@ -4,13 +4,13 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.time.ZonedDateTime;
 
 @Getter
 @Setter
 public class CreateDeliveryDto {
-    private String id;
     private String productTypeId;
     private String clientId;
-    private String warehouse;
     private BigDecimal price;
+    private ZonedDateTime estimatedDeliveryTime;
 }

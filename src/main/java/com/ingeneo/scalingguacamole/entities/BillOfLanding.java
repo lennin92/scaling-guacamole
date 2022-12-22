@@ -9,10 +9,10 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Data
 @Entity(name = "bill_of_landing")
 public class BillOfLanding {
     @Id
-    @Setter(AccessLevel.NONE)
     private String id;
 
     @OneToOne(cascade = CascadeType.ALL)
