@@ -7,9 +7,7 @@ import java.time.ZonedDateTime;
 import java.util.Date;
 
 @Getter
-@Setter
 @AllArgsConstructor
-@NoArgsConstructor
 @Builder
 public class BillOfLandingDetailDto {
     private String fleetNumber;

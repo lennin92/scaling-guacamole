@@ -9,7 +9,6 @@ import java.time.ZonedDateTime;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
 public class CreateBillOfLandingDto extends CreateDeliveryDto {
     private String fleetNumber;

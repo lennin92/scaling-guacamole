@@ -21,7 +21,7 @@ public class WayBillController {
     public List<WaybillDetailDto> getWaybillFilteded(
             @RequestParam(value = "clientId", defaultValue = "") String clientName
     ){
-        return this.service.getAllByCriteria(clientName.toLowerCase());
+        return this.service.getAllByCriteria(clientName);
     }
 
     @PostMapping
