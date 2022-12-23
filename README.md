@@ -1,7 +1,7 @@
 # Sistema logistica
 
 ## Swagger documentation
-Puede encontrar la documentacion: @ https://ingeneo-bak.herokuapp.com//ingeneo-test-api/swagger-ui/#/
+Puede encontrar la documentacion: @ https://ingeneo-bak.herokuapp.com/ingeneo-test-api/swagger-ui/#/
 
 ## Backend Endpoints:
 https://ingeneo-bak.herokuapp.com/ingeneo-test-api/
