@@ -1,9 +1,10 @@
-package com.ingeneo.scalingguacamole.services;
+package com.ingeneo.scalingguacamole.services.impl;
 
 import com.ingeneo.scalingguacamole.dtos.requests.CreateWayBillDto;
 import com.ingeneo.scalingguacamole.dtos.responses.WaybillDetailDto;
 import com.ingeneo.scalingguacamole.entities.*;
 import com.ingeneo.scalingguacamole.repositories.*;
+import com.ingeneo.scalingguacamole.services.IWayBillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class WayBillService implements IWayBillService{
+public class WayBillService implements IWayBillService {
     private WayBillRepository repository;
     private DeliveryRepository deliveryRepository;
     private ClientRepository clientRepository;

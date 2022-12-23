@@ -1,4 +1,4 @@
-package com.ingeneo.scalingguacamole.services;
+package com.ingeneo.scalingguacamole.services.impl;
 
 import com.ingeneo.scalingguacamole.dtos.requests.CreateBillOfLandingDto;
 import com.ingeneo.scalingguacamole.dtos.responses.BillOfLandingDetailDto;
@@ -10,6 +10,7 @@ import com.ingeneo.scalingguacamole.repositories.BillOfLandingRepository;
 import com.ingeneo.scalingguacamole.repositories.ClientRepository;
 import com.ingeneo.scalingguacamole.repositories.DeliveryRepository;
 import com.ingeneo.scalingguacamole.repositories.ProductTypeRepository;
+import com.ingeneo.scalingguacamole.services.IBillOfLandingService;
 import org.apache.commons.collections4.functors.ExceptionPredicate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,7 +24,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class BillOfLandingService implements IBillOfLandingService{
+public class BillOfLandingService implements IBillOfLandingService {
     private BillOfLandingRepository repository;
     private DeliveryRepository deliveryRepository;
     private ClientRepository clientRepository;

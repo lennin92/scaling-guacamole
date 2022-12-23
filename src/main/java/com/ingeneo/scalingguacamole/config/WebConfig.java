@@ -1,4 +1,4 @@
-package com.ingeneo.scalingguacamole;
+package com.ingeneo.scalingguacamole.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
