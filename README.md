@@ -4,10 +4,16 @@
 Puede encontrar la documentacion: @ https://ingeneo-bak.herokuapp.com/ingeneo-test-api/swagger-ui/#/
 
 ## Backend Endpoints:
-https://ingeneo-bak.herokuapp.com/ingeneo-test-api/
+
+*REPO:* https://github.com/lennin92/scaling-guacamole
+
+*URL:* https://ingeneo-bak.herokuapp.com/ingeneo-test-api/
 
 ## Frontend App:
-https://ingeneo-front.herokuapp.com/login
+
+*REPO:* https://github.com/lennin92/psychic-carnival
+
+*URL:* https://ingeneo-front.herokuapp.com/login
 
 ### Usuarios:
 
