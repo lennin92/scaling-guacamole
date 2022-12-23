@@ -1,7 +1,9 @@
 package com.ingeneo.scalingguacamole.entities;
 
 import com.github.f4b6a3.ulid.UlidCreator;
-import jakarta.persistence.*;
+
+import javax.persistence.*;
+
 import lombok.*;
 
 @Getter

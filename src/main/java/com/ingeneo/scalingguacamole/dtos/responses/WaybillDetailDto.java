@@ -4,6 +4,7 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -21,8 +22,8 @@ public class WaybillDetailDto {
     private String clientIdentificationNumber;
     private String warehouse;
     private BigDecimal price;
-    private ZonedDateTime estimatedDeliveryTime;
-    private ZonedDateTime registeredAt;
+    private Date estimatedDeliveryTime;
+    private Date registeredAt;
     private BigDecimal quantity;
     private BigDecimal priceWithDiscount;
 }

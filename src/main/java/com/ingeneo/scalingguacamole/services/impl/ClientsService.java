@@ -1,16 +1,17 @@
-package com.ingeneo.scalingguacamole.services;
+package com.ingeneo.scalingguacamole.services.impl;
 
 import com.ingeneo.scalingguacamole.dtos.requests.AddClientDto;
 import com.ingeneo.scalingguacamole.dtos.responses.ClientDetailDto;
 import com.ingeneo.scalingguacamole.entities.Client;
 import com.ingeneo.scalingguacamole.repositories.ClientRepository;
+import com.ingeneo.scalingguacamole.services.IClientsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class ClientsService implements IClientsService{
+public class ClientsService implements IClientsService {
     private ClientRepository repository;
 
     public ClientsService(@Autowired ClientRepository repository) {

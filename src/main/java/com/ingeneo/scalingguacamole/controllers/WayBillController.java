@@ -3,7 +3,6 @@ package com.ingeneo.scalingguacamole.controllers;
 import com.ingeneo.scalingguacamole.dtos.requests.CreateWayBillDto;
 import com.ingeneo.scalingguacamole.dtos.responses.WaybillDetailDto;
 import com.ingeneo.scalingguacamole.services.IWayBillService;
-import jakarta.validation.constraints.Null;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +19,7 @@ public class WayBillController {
 
     @GetMapping
     public List<WaybillDetailDto> getWaybillFilteded(
-            @RequestParam(value = "clientName", defaultValue = "") String clientName
+            @RequestParam(value = "clientId", defaultValue = "") String clientName
     ){
         return this.service.getAllByCriteria(clientName.toLowerCase());
     }

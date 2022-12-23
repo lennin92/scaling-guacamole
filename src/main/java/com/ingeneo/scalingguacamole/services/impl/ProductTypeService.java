@@ -1,7 +1,8 @@
-package com.ingeneo.scalingguacamole.services;
+package com.ingeneo.scalingguacamole.services.impl;
 
 import com.ingeneo.scalingguacamole.dtos.responses.ProductTypeDetailDto;
 import com.ingeneo.scalingguacamole.repositories.ProductTypeRepository;
+import com.ingeneo.scalingguacamole.services.IProductTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

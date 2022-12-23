@@ -1,16 +1,16 @@
 package com.ingeneo.scalingguacamole.repositories;
 
+import com.ingeneo.scalingguacamole.entities.User;
 import com.ingeneo.scalingguacamole.entities.WayBill;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
-public interface WayBillRepository
-        extends JpaRepository<WayBill, String> {
+public interface UserRepository
+        extends JpaRepository<User, String> {
 
-    List<WayBill> findAllByDelivery_Client_ClientsNameIsContaining(String name);
-
-    List<WayBill> findAllByDelivery_ClientId(String name);
+    Optional<User> findByUsername(String name);
 }

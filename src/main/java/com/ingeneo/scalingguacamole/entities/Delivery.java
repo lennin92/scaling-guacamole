@@ -1,11 +1,14 @@
 package com.ingeneo.scalingguacamole.entities;
 
 import com.github.f4b6a3.ulid.UlidCreator;
-import jakarta.persistence.*;
+
+import javax.persistence.*;
+
 import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -29,11 +32,11 @@ public class Delivery {
 
     @Column(name="registered_at")
     @Temporal(TemporalType.TIMESTAMP)
-    private ZonedDateTime registeredAt;
+    private Date registeredAt;
 
     @Column(name="estimated_delivery_date")
     @Temporal(TemporalType.TIMESTAMP)
-    private ZonedDateTime estimatedDeliveryDate;
+    private Date estimatedDeliveryDate;
 
     @Column(name = "delivery_price")
     private BigDecimal deliveryPrice;

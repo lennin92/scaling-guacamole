@@ -4,6 +4,7 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -23,6 +24,6 @@ public class BillOfLandingDetailDto {
     private BigDecimal price;
     private BigDecimal quantity;
     private BigDecimal priceWithDiscount;
-    private ZonedDateTime estimatedDeliveryTime;
-    private ZonedDateTime registeredAt;
+    private Date estimatedDeliveryTime;
+    private Date registeredAt;
 }

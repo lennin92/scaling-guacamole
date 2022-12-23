@@ -22,7 +22,7 @@ public class BillOfLandingController {
 
     @GetMapping
     public List<BillOfLandingDetailDto> getWaybillFilteded(
-            @RequestParam(value = "clientName", defaultValue = "") String clientName
+            @RequestParam(value = "clientId", defaultValue = "") String clientName
     ){
         return this.service.getAllByCriteria(clientName);
     }

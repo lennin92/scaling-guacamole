@@ -9,4 +9,6 @@ public interface BillOfLandingRepository
         extends JpaRepository<BillOfLanding, String> {
 
     List<BillOfLanding> findAllByDelivery_Client_ClientsNameContaining(String name);
+
+    List<BillOfLanding> findAllByDelivery_ClientId(String name);
 }

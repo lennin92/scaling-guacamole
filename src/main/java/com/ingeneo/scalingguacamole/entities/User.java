@@ -1,26 +1,30 @@
 package com.ingeneo.scalingguacamole.entities;
 
 import com.github.f4b6a3.ulid.UlidCreator;
+import lombok.*;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
-import lombok.*;
+
 
 @Getter
-@Setter
+@Setter()
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Entity(name = "product_type")
-public class ProductType {
+@Entity(name = "user")
+public class User {
     @Id
-    @Setter(AccessLevel.NONE)
     private String id;
 
-    @Column(name = "product_type_name")
-    private String productTypeName;
+    @Column(name = "username", unique = true)
+    private String username;
+
+    @Column(name = "password", unique = true)
+    private String password;
 
     @PrePersist
     private void prePersist(){
